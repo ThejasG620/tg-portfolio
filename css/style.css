@@ -1,3 +1,179 @@
-body {
-    background-color: lightblue;
+```css
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+:root {
+    /* Typography */
+    --font-main: Arial, sans-serif;
+
+    /* Provisional colors
+       Final palette will be decided later */
+    --background: white;
+    --text: #1a1a1a;
+    --accent: #1f4f6e;
+}
+
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+
+header {
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 0;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: var(--text);
+    text-decoration: none;
+
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+/* Custom hover underline */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    left: 50%;
+    bottom: -5px;
+
+    background-color: var(--accent);
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+#hero {
+    padding: 3rem 0;
+    --background: black;
+}
+
+#hero h1 {
+    font-size: 3.75rem;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+#hero h2 {
+    margin-top: 1rem;
+
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+#hero p {
+    max-width: 700px;
+    margin-top: 1.5rem;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+section h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+
+/* =========================
+   BODY TEXT
+========================= */
+
+section p {
+    font-size: 1rem;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 4rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+```
